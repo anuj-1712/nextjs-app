@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,::after,::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* styling all the icons */
+.arrow-down-icon{
+  height:10px;
+  width: 10px;
+}
+
+.hamburger-icon{
+  display: none;
+  height: 25px;
+  width: 30px;
+  color: white;
+}
+
+.search-icon{
+  height: 25px;
+  width: 25px;
+}
+
+.search-icon:hover,.hamburger-icon:hover{
+  cursor: pointer;
+}
+
+/* media queries */
+@media screen and (max-width:767px) {
+  .hamburger-icon{
+    display: block;
+  }
+}
