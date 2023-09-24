@@ -29,16 +29,16 @@ export default function Home() {
     setTrending(data.articles);
   };
 
-  useEffect(() => {
-    getTopStories();
-    getTrending();
-  }, []);
+  // useEffect(() => {
+  //   getTopStories();
+  //   getTrending();
+  // }, []);
 
   return (
     <>
       <Hero />
       <section className="w-11/12 sm:w-full max-w-[450px] sm:max-w-[1400px] mx-auto min-h-[900px]">
-        {loading && <Loader top={80} left={50}/>}
+        {loading && <Loader top={120} left={50}/>}
         {!loading && (
           <>
             {topStories.length > 0 && (

@@ -50,7 +50,7 @@ const Category = ({ params: { category } }) => {
               );
             })}
           </div>
-          <PrevNextbtn setPageNo={setPageNo} pageNo={pageNo} totalResults={totalResults}/>
+          {data.length > 0 && <PrevNextbtn setPageNo={setPageNo} pageNo={pageNo} totalResults={totalResults}/>}
         </>
       )}
     </section>
