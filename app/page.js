@@ -41,7 +41,7 @@ export default function Home() {
         {loading && <Loader top={120} left={50}/>}
         {!loading && (
           <>
-            {topStories.length > 0 && (
+            {topStories?.length > 0 && (
               <p className="text-xl font-medium underline mt-8 mb-4 mx-2 sm:mx-6 md:mx-8">
                 Top Stories
               </p>

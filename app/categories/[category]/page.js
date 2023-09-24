@@ -29,7 +29,7 @@ const Category = ({ params: { category } }) => {
       {loading && <Loader top={40} left={50}/>}
       {!loading && (
         <>
-          {data.length > 0 && (
+          {data?.length > 0 && (
             <h2 className="text-xl font-medium underline mb-6">{`${category[0].toUpperCase()}${category.slice(
               1,
               category.length
@@ -50,7 +50,7 @@ const Category = ({ params: { category } }) => {
               );
             })}
           </div>
-          {data.length > 0 && <PrevNextbtn setPageNo={setPageNo} pageNo={pageNo} totalResults={totalResults}/>}
+          {data?.length > 0 && <PrevNextbtn setPageNo={setPageNo} pageNo={pageNo} totalResults={totalResults}/>}
         </>
       )}
     </section>

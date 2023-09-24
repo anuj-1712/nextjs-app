@@ -42,7 +42,7 @@ const Search = ({ params: { query } }) => {
               );
             })}
           </div>
-          <PrevNextbtn setPageNo={setPageNo} pageNo={pageNo} totalResults={totalResults}/>
+          {data?.length > 0 && <PrevNextbtn setPageNo={setPageNo} pageNo={pageNo} totalResults={totalResults}/>}
         </>
       )}
     </section>

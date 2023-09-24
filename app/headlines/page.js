@@ -26,7 +26,7 @@ const Headlines = () => {
       {loading && <Loader top={40} left={50} />}
       {!loading && (
         <>
-          {topStories.length > 0 && (
+          {topStories?.length > 0 && (
             <h2 className="text-xl font-medium underline mb-6">Top Headlines</h2>
           )}
           <div className="flex flex-col gap-10 lg:gap-6">
