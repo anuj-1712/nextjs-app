@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 export default function Home() {
   const [topStories, setTopStories] = useState([]);
   const [trending, setTrending] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const getTopStories = async () => {
     setLoading(true);
@@ -29,10 +29,10 @@ export default function Home() {
     setTrending(data.articles);
   };
 
-  // useEffect(() => {
-  //   getTopStories();
-  //   getTrending();
-  // }, []);
+  useEffect(() => {
+    getTopStories();
+    getTrending();
+  }, []);
 
   return (
     <>
